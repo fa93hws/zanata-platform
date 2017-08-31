@@ -9,10 +9,12 @@ import javax.ws.rs.core.Response;
 import org.zanata.rest.dto.VersionInfo;
 import org.zanata.util.VersionUtility;
 
+import java.io.Serializable;
+
 @RequestScoped
 @Named("versionService")
 @Path(VersionResource.SERVICE_PATH)
-public class VersionService implements VersionResource {
+public class VersionService implements VersionResource, Serializable {
 
     private static final long serialVersionUID = -7379405952512823733L;
     private VersionInfo version;

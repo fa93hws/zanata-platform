@@ -20,6 +20,7 @@
  */
 package org.zanata.rest.service;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 import javax.enterprise.context.RequestScoped;
@@ -66,7 +67,8 @@ import com.google.common.base.Optional;
 @Named("translatedDocResourceService")
 @Path(TranslatedDocResource.SERVICE_PATH)
 @Transactional
-public class TranslatedDocResourceService implements TranslatedDocResource {
+public class TranslatedDocResourceService implements TranslatedDocResource,
+        Serializable {
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory
             .getLogger(TranslatedDocResourceService.class);
     private static final long serialVersionUID = -5855787114970845084L;

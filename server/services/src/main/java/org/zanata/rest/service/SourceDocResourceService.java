@@ -20,6 +20,7 @@
  */
 package org.zanata.rest.service;
 
+import java.io.Serializable;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -71,7 +72,8 @@ import org.zanata.service.LocaleService;
 @Named("sourceDocResourceService")
 @Path(SourceDocResource.SERVICE_PATH)
 @Transactional
-public class SourceDocResourceService implements SourceDocResource {
+public class SourceDocResourceService implements SourceDocResource,
+        Serializable {
     private static final org.slf4j.Logger log =
             org.slf4j.LoggerFactory.getLogger(SourceDocResourceService.class);
     private static final long serialVersionUID = 7787405987851272827L;

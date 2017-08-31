@@ -20,6 +20,7 @@
  */
 package org.zanata.rest.service;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.net.URI;
@@ -93,7 +94,7 @@ import static org.apache.commons.lang.StringUtils.abbreviate;
 @Path(StatisticsResource.SERVICE_PATH)
 @RequestScoped
 @Transactional(readOnly = true)
-public class StatisticsServiceImpl implements StatisticsResource {
+public class StatisticsServiceImpl implements StatisticsResource, Serializable {
     private static final long serialVersionUID = 4936614337971433129L;
 
     @Inject

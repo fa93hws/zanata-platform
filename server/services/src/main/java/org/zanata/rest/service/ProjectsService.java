@@ -20,6 +20,7 @@
  */
 package org.zanata.rest.service;
 
+import java.io.Serializable;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +53,7 @@ import org.zanata.rest.dto.Project;
 @Named("projectsService")
 @Path(ProjectsResource.SERVICE_PATH)
 @Transactional(readOnly = true)
-public class ProjectsService implements ProjectsResource {
+public class ProjectsService implements ProjectsResource, Serializable {
 
     private static final long serialVersionUID = 851866433537828355L;
 
